@@ -5,6 +5,7 @@ import "./App.css";
 // import Car from "components/Car";
 import Garage from "components/Garage";
 import Header from "components/Header";
+import Football from "components/Foodball";
 
 /*
 function App() {
@@ -39,6 +40,7 @@ export default class App extends React.Component {
         */}
         <Garage />
         <Header />
+        <Football />
       </div>
     );
   }
