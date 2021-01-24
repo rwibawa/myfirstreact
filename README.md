@@ -1,5 +1,8 @@
 # Getting Started with Create React App
-* [Tutorial]https://www.w3schools.com/react/default.asp()
+* [Tutorial](https://www.w3schools.com/react/default.asp)
+* [create-react-app](https://create-react-app.dev/docs/getting-started)
+* [Examples](https://reactjs.org/community/examples.html)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## 1. Setup
@@ -26,6 +29,83 @@ We suggest that you begin by typing:
 
   cd myfirstreact
   npm start
+```
+
+### 1.1. Editor setup
+
+#### Formatting Code Automatically
+```bash
+$ npm install --save husky lint-staged prettier
+```
+
+Add to `package.json`
+```json
+"lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
+"husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+```
+
+#### 1.2. Developing Components in Isolation
+```bash
+$ npx -p @storybook/cli sb init
+To run your Storybook, type:
+
+   npm run storybook 
+
+For more information visit: https://storybook.js.org
+
+```
+
+#### 1.3. Analyzing Bundle Size
+```bash
+$ npm install --save source-map-explorer
+```
+
+Add to `package.json`
+```json
+"scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+```
+
+Then run:
+```bash
+$ npm run build
+$ npm run analyze
+```
+
+#### 1.4. HTTPS in Dev
+```bash
+$ HTTPS=true npm start
+
+# Custom SSL certificate
+$ HTTPS=true SSL_CRT_FILE=cert.crt SSL_KEY_FILE=cert.key npm start
+```
+
+Or add to `package.json`
+```json
+"scripts": {
+    "start": "HTTPS=true react-scripts start",
+    "build-storybook": "build-storybook -s public"
+  },
+```
+
+Or add `.env` file
+```
+HTTPS=true 
 ```
 
 ### Available Scripts

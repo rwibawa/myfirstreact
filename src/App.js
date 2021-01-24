@@ -1,6 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from "./logo.svg";
+import React from "react";
+import "./App.css";
+// import ShoppingList from "components/ShoppingList";
+import Car from "components/Car";
 
+/*
 function App() {
   return (
     <div className="App">
@@ -21,5 +25,15 @@ function App() {
     </div>
   );
 }
+*/
 
-export default App;
+export default class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        {/* <ShoppingList /> */}
+        <Car color="red" />
+      </div>
+    );
+  }
+}
