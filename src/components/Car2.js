@@ -11,6 +11,11 @@ class Car2 extends Component {
     };
   }
 
+  // The componentWillUnmount method is called when the component is about to be removed from the DOM.
+  componentWillUnmount() {
+    alert("The component named Car2 is about to be unmounted");
+  }
+
   changeColor = () => {
     this.setState({ color: "blue" });
   };
