@@ -2,7 +2,9 @@
 import React from "react";
 import "./App.css";
 // import ShoppingList from "components/ShoppingList";
-import Car from "components/Car";
+// import Car from "components/Car";
+import Garage from "components/Garage";
+import Header from "components/Header";
 
 /*
 function App() {
@@ -31,8 +33,12 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="App">
-        {/* <ShoppingList /> */}
-        <Car color="red" />
+        {/* 
+          <ShoppingList /> 
+          <Car color="red" />
+        */}
+        <Garage />
+        <Header />
       </div>
     );
   }
