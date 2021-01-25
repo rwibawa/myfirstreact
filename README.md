@@ -174,3 +174,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## 2. Add Boostrap
+* [ReactBootstrap](https://react-bootstrap.netlify.app/getting-started/introduction/)
+
+```bash
+$ npm install -s react-bootstrap bootstrap
+```
+
+Add to `src/index.js`
+```js
+import 'bootstrap/dist/css/bootstrap.css';
+// Put any other imports below so that CSS from your
+// components takes precedence over default styles.
+```

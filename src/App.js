@@ -6,6 +6,8 @@ import "./App.css";
 import Garage from "components/Garage";
 import Header from "components/Header";
 import Football from "components/Foodball";
+import AlertDismissible from "components/AlertDismissible";
+import Alerts from "components/Alerts";
 
 /*
 function App() {
@@ -30,18 +32,38 @@ function App() {
 }
 */
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <div className="App">
-        {/* 
-          <ShoppingList /> 
-          <Car color="red" />
-        */}
-        <Garage />
-        <Header />
-        <Football />
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div className="App">
+      {/* 
+        <ShoppingList /> 
+        <Car color="red" />
+      */}
+      <Garage />
+      <Header />
+      <Football />
+      <hr />
+      <AlertDismissible />
+      <hr />
+      <Alerts />
+    </div>
+  );
 }
+
+export default App;
+
+// export default class App extends React.Component {
+//   render() {
+//     return (
+//       <div className="App">
+//         {/*
+//           <ShoppingList />
+//           <Car color="red" />
+//         */}
+//         <Garage />
+//         <Header />
+//         <Football />
+//       </div>
+//     );
+//   }
+// }
