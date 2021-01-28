@@ -2,6 +2,7 @@
 * [Tutorial](https://www.w3schools.com/react/default.asp)
 * [create-react-app](https://create-react-app.dev/docs/getting-started)
 * [Examples](https://reactjs.org/community/examples.html)
+* [cra-template](https://www.npmjs.com/search?q=cra-template-*)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -188,4 +189,27 @@ Add to `src/index.js`
 import 'bootstrap/dist/css/bootstrap.css';
 // Put any other imports below so that CSS from your
 // components takes precedence over default styles.
+```
+
+## 3. Add `expressjs`
+```bash
+$ npm i -s express dotenv
+$ touch server.js
+$ npm run build
+$ node server.js
+
+# Add script
+$ vi package.json
+$ npm run server
+```
+
+Open [http://localhost:9000](http://localhost:9000).
+
+### Add `nodemon` for running `server.js` in debug mode:
+```bash
+$ npm i -s nodemon
+
+# Add script
+$ vi package.json
+$ npm run debug
 ```
