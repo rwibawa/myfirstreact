@@ -6,9 +6,12 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, 'build')));
 
-// serve index.html for  any unknown paths
-app.get('/*', function (req, res) {
+app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
+
+app.get('/api/test', (req, res) => {
+  res.send('test!')
+})
 
 app.listen(process.env['PORT'] || 9000);

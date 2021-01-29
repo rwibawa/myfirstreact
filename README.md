@@ -122,6 +122,28 @@ HTTPS=true
 }
 ```
 
+### 1.6. Configuring Proxy Manually
+```bash
+$ npm i -s http-proxy-middleware
+```
+
+Add `src/setupProxy.js`
+```js
+const { createProxyMiddleware } = require('http-proxy-middleware');
+
+module.exports = function(app) {
+  app.use(
+    '/api',
+    createProxyMiddleware({
+      target: 'http://localhost:9000',
+      changeOrigin: true,
+    })
+  );
+};
+```
+
+Call the API at [https://localhost:3000/api/test](https://localhost:3000/api/test).
+
 ### Available Scripts
 
 In the project directory, you can run:
