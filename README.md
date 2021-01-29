@@ -109,6 +109,19 @@ Or add `.env` file
 HTTPS=true 
 ```
 
+### 1.5. Absolute Imports
+`jsconfig.json`
+```json
+{
+    "compilerOptions": {
+        "baseUrl": "src"
+    },
+    "include": [
+        "src"
+    ]
+}
+```
+
 ### Available Scripts
 
 In the project directory, you can run:
